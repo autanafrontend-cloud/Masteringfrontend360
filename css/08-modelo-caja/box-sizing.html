@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            background: red;
+        }
+        .caja-1 {
+            box-sizing: border-box;
+            /* display: block; */
+            width:50%;
+            heigth: 200px;
+            padding: 50px;
+            margin: 12px auto;
+            background: purple;
+            border: 2px solid black;
+        }
+        .caja-2 {
+            background-color: red;
+        }
+        .btn{
+            display: inline-block;
+            background-color: yellow;
+            text-decoration: none;
+            color: black;
+            padding: 8px 16px;
+            margin: 16px auto;
+        }
+        .btn-block{
+            display: block;
+            background-color: yellow;
+            text-decoration: none;
+            color: black;
+            padding: 8px 16px;
+            margin: 16px auto;
+            width: 75px;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .cuadrado {
+            width: 200px;
+            aspect-ratio: 1/2;
+            background: green;
+        }
+        iframe {
+            width: clamp(300px, 100%, 800px );
+            aspect-ratio: 16/9;
+        }
+    </style>
+</head>
+<body>
+    <iframe  src="https://www.youtube.com/embed/Ex1x9EIPuo8?si=Lq85j2lRHjWQp_0S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
+    
+    <div class="container">
+    <div class="caja-1" class="container">
+        Caja 1
+    </div>
+    </div>
+    <div class="text-center">
+    <a href="#" class="btn">Mas INFORMACION</a>
+    <a href="#" class="btn-block">Bloque</a>
+    </div>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae tempora optio temporibus inventore exercitationem ducimus neque esse repellat mollitia? A sint quas autem quo maxime recusandae nemo dolorum nobis dolor.</p>
+    <!-- <button href="#" class="caja-1">Mas INFORMACION</button> -->
+    <p class="caja-1">Parrafo 1</p>
+    <div class="caja-2">
+        Caja 2
+    </div>
+    <ul>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, cum consectetur? Incidunt ab dolores quidem repellendus illum. Repellat repudiandae velit sequi qui quam reprehenderit ipsa praesentium, quas cumque, cupiditate odit!</li>
+        <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+    </ul>
+    <div class="cuadrado">
+        hola
+    </div>
+    
+</body>
+</html>

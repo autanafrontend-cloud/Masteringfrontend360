@@ -1,0 +1,95 @@
+/* =========================================================
+   🎨 PRÁCTICA – Hero fluido
+   Objetivo: aplicar variables (tokens), modo oscuro, medidas 
+   fluidas y principios básicos de diseño coherente.
+   ========================================================= */
+
+/* ========================
+   🎯 VARIABLES (TOKENS)
+   ======================== */
+:root {
+  --bg-color: #f9fafb;
+  --text-color: #15171a;
+  --accent-color: #2958ff;
+  --container-max-width: 54rem;
+}
+
+/* 🌙 MODO OSCURO AUTOMÁTICO */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #15171a;
+    --text-color: #f9fafb;
+    --accent-color: #90aaff;
+    --container-max-width: 54rem;
+  }
+}
+
+/* =========================================================
+   🧱 ESTRUCTURA GLOBAL
+   ========================================================= */
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  min-height: 100vh;
+}
+
+header.container {
+  padding: 1rem 0;
+  text-align: center;
+  font-size: clamp(1.25rem, 2vw, 2rem);
+  color: var(--accent-color);
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+  width: 90%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+/* =========================================================
+   🦸‍♀️ SECCIÓN HERO
+   ========================================================= */
+
+.hero {
+  padding: clamp(1rem, 5vw, 4rem) 0;
+  text-align: center;
+}
+
+/* TÍTULO HERO */
+.hero__title {
+  margin: 0 0 0.5rem 0;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+/* SUBTÍTULO HERO */
+.hero__subtitle {
+  max-width: 36rem;
+  margin: 0 auto;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  color: var(--text-color);
+}
+
+/* BOTÓN DE ACCIÓN */
+.hero__cta {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background: var(--accent-color);
+  color: var(--bg-color);
+  text-decoration: none;
+  border-radius: 0.5rem;
+  padding: clamp(0.5rem, 2vw, 1rem) clamp(1.5rem, 6vw, 3rem);
+  font-weight: 600;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  transition: background 0.3s, color 0.3s;
+}
+.hero__cta:hover,
+.hero__cta:focus {
+  background: var(--text-color);
+  color: var(--accent-color);
+}

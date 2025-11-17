@@ -1,0 +1,99 @@
+:root {
+    --color-fondo: #f4f4f4;
+    --color-texto: #222222;
+    --color-principal: #0044ff;
+    --color-secundario: #0056b3;
+    --espaciado: 1.5rem;
+    --fuente-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* estilo base */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: var(--fuente-base);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    padding: var(--espaciado);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  h1 {
+    color: var(--color-principal);
+    margin-bottom: var(--espaciado);
+  }
+  
+  a {
+    color: var(--color-secundario);
+    text-decoration: none;
+  }
+  /* a:hover es mas especifico que "a" */
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  button {
+    margin-top: var(--espaciado);
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+    background-color: var(--color-principal);
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: var(--color-secundario);
+  }
+  
+  /* Switch para el modo oscuro */
+  .switch {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .switch input {
+    display: none;
+  }
+  
+  .slider {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    transition: 0.3s;
+  }
+  
+  .slider::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 1px;
+    top: 1px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--color-principal);
+  }
+  
+  input:checked + .slider::before {
+    transform: translateX(20px);
+  }
+  
+  .label-text {
+    font-size: 1.6rem;
+  }
+  

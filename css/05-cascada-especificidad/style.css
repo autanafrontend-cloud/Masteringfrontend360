@@ -1,0 +1,13 @@
+p {
+    color: red;
+}
+
+.orange {
+    color: orange;
+}
+p.gris {
+    color:gray
+}
+.gris.orange {
+    color: blueviolet;
+}

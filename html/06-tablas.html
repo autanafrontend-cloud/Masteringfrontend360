@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        thead th{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplo de Temperaturas</h1>
+    <caption>Temperaturas de hoy<time datetime="2025-10-28"></time></caption>
+    <table border="1">
+        <thead>
+        <tr>
+            <th scope="col" id="c1">Ciudad</th>
+            <th scope="col" id="c2">Maxima</th>
+            <th scope="col" id="c3">Minima</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row" headers="c1">Zaragoza</th>
+            <td headers="c2">20</td>
+            <td headers="c3">9</td>
+        </tr>
+        <tr>
+            <th scope="row" headers="c1">Huesca</th>
+            <td headers="c2">19</td>
+            <td headers="c3">11</td>
+        </tr>
+        <tr>
+            <th scope="row" headers="c1">sevilla</th>
+            <td headers="c2">26</td>
+            <td headers="c3">15</td>
+        </tr>
+        <tr>
+            <th scope="row" headers="c1">Logroño</th>
+            <td headers="c2">19</td>
+            <td headers="c3">1</td>
+        </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Datos proporcionados por AEMET</td>
+            </tr>
+        </tfoot>
+    </table>
+
+<table border="1">
+<caption>Animales en peligro de extincion</caption>
+<tr>
+    <th>Nombre</th>
+    <th>Actualidad</th>
+    <th>Prevision 2010</th>
+    <th>Prevision 2020</th>
+</tr>
+<tr>
+    <th>Ballena</th>
+    <td>6000</td>
+    <td>4000</td>
+    <td>1500</td>
+</tr>
+<tr>
+    <td>Oso Pardo</td>
+    <td>50</td>
+    <td colspan="2" rowspan="2">0</td>
+</tr>
+<tr>
+    <td>lince</td>
+    <td>10</td>
+</tr>
+<th>
+    <td>Tigre</td>
+    <td>300</td>
+    <td colspan="2">210</td>
+</th>
+</table>
+
+<table border="1">
+<caption>A test table merged cell</caption>
+<tr>
+    <th rowspan="2"></th>
+    <th colspan="2">Average</th>
+    <th rowspan="2">Red eyes</th>
+</tr>    
+<tr>
+    <th>height</th>
+    <th>weight</th>
+</tr>
+<tr>
+    <td>Males</td>
+    <td>1.9</td>
+    <td>0.003</td>
+    <td>40%</td>
+</tr>
+<tr>
+    <td>Famele</td>
+    <td>1.7</td>
+    <td>0.002</td>
+    <td>43%</td>
+</tr>
+</table>
+
+<table border="1">
+    <tr>
+       <th>student Name</th>
+       <th>Student Reg. No.</th>
+       <th>Subject Name</th>
+       <th>Obtained Marks</th>
+       <th>Total Marks</th>
+       <th>Average Mark</th>
+    </tr>
+    <tr>
+        <td rowspan="3">Alan</td>
+        <td rowspan="3">Std-01</td>
+        <td>Math</td>
+        <td>50</td>
+        <td rowspan="3">150</td>
+        <td rowspan="3">50</td>
+    </tr>
+    <tr>
+        <td>Physics</td>
+        <td>50</td>
+    </tr>
+    <tr>
+        <td>Chemestry</td>
+        <td>50</td>
+    </tr>
+    <tr>
+        <td rowspan="3">Scott</td>
+        <td rowspan="3">Std-01</td>
+        <td>Math</td>
+        <td>50</td>
+        <td rowspan="3">150</td>
+        <td rowspan="3">50</td>
+    </tr>
+    <tr>
+        <td>Physics</td>
+        <td>50</td>
+    </tr>
+    <tr>
+        <td>Chemestry</td>
+        <td>50</td>
+    </tr>
+    <tr>
+        <td rowspan="3">Jhon</td>
+        <td rowspan="3">Std-01</td>
+        <td>Math</td>
+        <td>50</td>
+        <td rowspan="3">150</td>
+        <td rowspan="3">50</td>
+    </tr>
+    <tr>
+        <td>Physics</td>
+        <td>50</td>
+    </tr>
+    <tr>
+        <td>Chemestry</td>
+        <td>50</td>
+    </tr>
+</table>
+
+<table border="1">
+    <caption>Tabla comparativaa</caption>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan="3" scope="colgroup">MP3 mini</th>
+            <th colspan="2" scope="colgroup">MP3 grande</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Capacidad de almacenamiento</th>
+            <td>4GB (1000 canciones)</td>
+            <td>8GB (2000 canciones)</td>
+            <td>16GB (4000 canciones)</td>
+            <td>30GB (7500 canciones)</td>
+            <td>80GB (20000 canciones)</td>
+        </tr>
+        <tr>
+            <th scope="row">Colores</th>
+                <td>Blanco</td>
+            <td>
+                <ul>
+                    <li>Gris</li>
+                    <li>Verde</li>
+                    <li>Azul</li>
+                    <li>Rosa</li>
+                </ul>
+            </td>
+                <td >Gris</td>
+                <td colspan="2" >
+            <ul>
+                <li>Blanco</li>
+                <li>gris</li>
+            </ul>
+            </td>
+        <tr>
+            <th scope="row">Pantalla</th>
+            <td colspan="3">LCD de 3 cm (diagonal con retroalimentacion)</td>
+            <td colspan="2">LCD de 6 cm (diagonal) con retroiluminacion</td>
+        </tr>
+        <tr>
+            <th rowspan="2" scope="rowgroup">Tiempo de Carga</th>
+            <td colspan="3" rowspan="2">Unas 3 horas</td>
+            <td colspan="2" >Unas 4 horas</td> 
+        </tr>
+        <tr> 
+            <td colspan="2">Unas 2 horas para alcanzar el 80% de la capacidad</td>
+        </tr>
+</tbody>
+</table>
+</body>
+</html>

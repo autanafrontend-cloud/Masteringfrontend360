@@ -1,0 +1,139 @@
+ /* =========================================================
+   🎨 PRÁCTICA – Hero fluido
+   Objetivo: aplicar variables (tokens), modo oscuro, medidas 
+   fluidas y principios básicos de diseño coherente.
+   ========================================================= */
+   
+   
+/* ========================
+   🎯 VARIABLES (TOKENS)
+   Define variables para:
+   - color de fondo
+   - color de texto
+   - color destacado (acento)
+   - anchura máxima del contenedor
+   ======================== */
+   :root{
+    --color-bg: white;
+    --color-text: rgb(68, 64, 64);
+    --color-destacado: rgb(238, 215, 11);
+    --anchura-max: 1320px;
+   }
+
+   /* ========================
+  🌙 MODO OSCURO AUTOMÁTICO
+  Sobrescribe las variables cuando el usuario
+  tenga activado el modo oscuro en el sistema.
+  ======================== */
+   @media (prefers-color-scheme: dark) {
+     :root {
+      --color-bg: black;
+      --color-text: white;
+     }
+   }
+  /* =========================================================
+  🧱 ESTRUCTURA GLOBAL
+  ========================================================= */
+   /* -------------------------
+  BODY
+  - Usa una tipografía del sistema (system-ui) font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  - Aplica color de fondo y color de texto
+
+  ------------------------- */
+   body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: var(--color-text);
+    background: var(--color-bg);
+  }
+ /* -------------------------
+  CABECERA
+    - Padding vertical de 1rem
+  - Texto centrado horizontalmente
+  - Tamaño de fuente 
+  - Color de texto destacado    
+  ------------------------- */
+    header{
+      padding-block: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+      color: var(--color-destacado);
+    }
+ /* -------------------------
+  CONTENEDOR PRINCIPAL
+    - Anchura del 90%
+  - Máximo ancho definido por variable
+  - Centrado horizontal
+  ------------------------- */
+   .container {
+    width: 90%;
+    max-width: var(--anchura-max);
+    margin-inline: auto;
+   }
+  /* =========================================================
+  🦸‍♀️ SECCIÓN HERO
+  ========================================================= */
+   
+/* -------------------------
+  SECCIÓN HERO
+  - Padding fluido: mínimo 1rem, preferido 5vw, máximo 4rem
+  - Texto centrado
+  ------------------------- */
+  .hero{
+    padding: clam(1rem, 5vw, 4rem);
+    text-align: center;
+    /* font-size: 1.2rem;
+    list-style: 1.5; */
+    background-color: color-mix(in srgb, var(--color-text) 5%, transparent);
+    font-size: clam(1rem, 2.5vw, 1.5rem);
+   }
+/* -------------------------
+  TÍTULO DEL HERO
+  - Márgenes 0 excepto inferior (0.5rem)
+  - Tamaño de fuente fluido: min 2rem, pref 5vw, max 4rem
+  - Ajusta interlineado y espaciado entre letras
+  ------------------------- */
+  .hero__title{
+    margin: 0 0 0.5rem 0;
+    font-size: clam(2.5vw, 5vw, 4rem);
+    line-height: 1.4;
+    letter-spacing: .8px;
+   }
+/* -------------------------
+  SUBTÍTULO DEL HERO
+  - Anchura máxima para limitar líneas
+  - Centrado horizontal del bloque
+  - Tamaño de fuente fluido: min 1rem, pref 2.5vw, max 1.5rem
+  - Color
+  ------------------------- */    
+  .hero__subtitle{
+    max-width: 60ch;
+    margin-inline: auto;
+    font-size: clam(1rem, 2.5vw, 1.5rem);
+    opacity: 0.5;
+   }
+  /* -------------------------
+  BOTÓN DE ACCIÓN
+  - Margen superior para separarlo del texto
+  - Color de fondo
+  - color de texto (con contraste alto)
+  - Sin subrayado text-decoration
+  - Bordes redondeados
+  - Padding fluido: más horizontal que vertical
+  - Peso de fuente (grosor) 600 font-weight:
+  ------------------------- */   
+    .hero__cta{
+      display: inline-block;
+      margin-top: 2em;
+      background: var(--color-destacado);
+      color: #222;
+      text-decoration: none;
+      border-radius: .5em;
+      padding: 1em 4em;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    .hero__cta:hover {
+      transform: translateY(-5px);
+      filter: brightness(1.5);
+    }

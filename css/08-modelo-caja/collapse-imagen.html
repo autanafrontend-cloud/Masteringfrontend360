@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .padre {
+            width: 50%;
+            margin-block: 50px;
+            background-color: red;
+            
+        }
+        .padre > *  {
+            height: 200px;
+        }
+        .primer-hijo {
+            box-sizing: border-box;
+            /* margin-block: 50px; */
+            background: purple;
+        }
+        .ultimo-hijo {
+            box-sizing: border-box;
+            /* margin-block: 50px; */
+            background: green;
+        }
+        .p-y {
+            padding-block: 80px;
+        }
+        .border-y {
+            border-block: 2px solid;
+        }
+    </style>
+</head>
+<body
+    <!-- Márgenes de un elemento hijo y su primer o último hijo pueden colapsar con los márgenes del padre, si no hay padding, borde o contenido que los separe. (Probar) -->
+  
+    <h2>colapso de imagenes</h2>
+    <div class="padre">
+        <div class="primer-hijo">
+        primer hijo
+        </div>
+        <div class="ultimo-hijo">
+        ultimo hijo
+        </div>
+    </div>
+  
+    <h2>no colapso por contenido</h2>
+    <div class="padre">
+        <P>Hola texto del padre</P>
+        <div class="primer-hijo">
+        primer hijo
+        </div>
+        <div class="ultimo-hijo">
+        ultimo hijo
+        </div>
+    </div>
+
+    <h2>no colapso por padding</h2>
+    <p>Siempre y cuando el padding lo tenga aplicado el padre</p>
+    <div class="padre p-y">
+        hola texto del padre
+        <div class="primer-hijo">
+        primer hijo
+        </div>
+        <div class="ultimo-hijo">
+        ultimo hijo
+        </div>
+    </div>
+
+    <h2>no colapso por border-box</h2>
+    <p>Siempre y cuando el padding lo tenga aplicado el padre</p>
+    <div class="padre border-y">
+        hola texto del padre
+        <div class="primer-hijo">
+        primer hijo
+        </div>
+        <div class="ultimo-hijo">
+        ultimo hijo
+        </div>
+    </div>
+
+</body>
+</html>
